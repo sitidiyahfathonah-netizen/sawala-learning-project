@@ -7,7 +7,7 @@ const angka2 = 10;
 
 
 console.log("kalkulator langsung")
-//operasi matematika
+//operasi matematika(melakukan perhitungan matematika)
 console.log("Penjumlahan:", angka1 + angka2);
 console.log("Pengurangan:", angka1 - angka2);
 console.log("Perkalian:", angka1 * angka2);
@@ -15,7 +15,7 @@ console.log("Pembagian:", angka1 / angka2);
 console.log("Sisa Pembagian:", angka1 % angka2);
 
 
-//function kalkulator
+//function kalkulator(Membuat sebuah fungsi atau tugas yang bisa dipanggil kembali.)
 
 //penambahan
 function tambah(angka1, angka2) {
