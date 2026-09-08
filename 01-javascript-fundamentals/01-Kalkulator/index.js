@@ -15,7 +15,7 @@ console.log("Pembagian:", angka1 / angka2);
 console.log("Sisa Pembagian:", angka1 % angka2);
 
 
-//function kalkulator(Membuat sebuah fungsi atau tugas yang bisa dipanggil kembali.)
+//function kalkulator(Membuat sebuah fungsi atau tugas yang bisa dipanggil kembali/wadahnya.)
 
 //penambahan
 function tambah(angka1, angka2) {
