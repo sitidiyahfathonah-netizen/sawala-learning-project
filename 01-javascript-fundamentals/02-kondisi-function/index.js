@@ -8,22 +8,22 @@ const cekKelulusan = (nilai) => {
 }
 console.log(cekKelulusan(80));
 
-//function
+//function arrow menggunakan => (lebih singkat)
 const hitungTotal = (harga, jumlah) => {
     const total = harga * jumlah;
     return total;
 }
 console.log(hitungTotal(10000, 3));
 
-//function
+//function biasa
 function cekNilai(nilai) {
-    if (nilai >= 90) {
+    if (nilai >= 90) { //jika nilainya 90 atau lebih maka akan menampilkan A
         return "A";
-    } else if (nilai >= 80) {
+    } else if (nilai >= 80) { //jika nilainya 80 atau lebih maka akan menampilkan B
         return "B";
-    } else if (nilai >= 70) {
+    } else if (nilai >= 70) { //jika nilainya 70 atau lebih maka akan menampilkan C
         return "C";
-    } else {
+    } else { //jika nilainya kurang dari 70 maka akan menampilkan D
         return "D";
     }
 }

@@ -5,22 +5,23 @@ const siswa = [
     { nama: "Citra", nilai: 75, },
 ];
 
+// for of(digunakan untuk mengulang data array) lebih cepat dari for biasa
+console.log("FOR OF")
 for (const datasiswa of siswa) {
     console.log(datasiswa.nama, datasiswa.nilai);
 }
 
-//mengulang data (array)
-// array.forEach()
-
+// for each(digunakan untuk mengulang data array) seperti for biasa
+console.log("MENGULANG DATA")
 siswa.forEach(function (dataSiswa) {
     console.log(dataSiswa.nama, dataSiswa.nilai);
 })
 
-// array.map() membuat array baru
+// array.map() membuat array baru 
 const namasiswa = siswa.map(function (dataSiswa) {
     return dataSiswa.nama;
 })
-
+console.log("ARRAY MAP")
 console.log(namasiswa);
 
 // array.filter()membuat array baru yang memenuhi kondisi tertentu
@@ -28,9 +29,11 @@ const nilaiSiswa = siswa.filter(function (dataSiswa) {
     return dataSiswa.nilai >= 80;
 })
 
+console.log("ARRAY FILTER");
 console.log(nilaiSiswa);
 
 // find()mencari satu data pertama yang cocok.
+console.log("ARRAY FIND");
 const siswaAni = siswa.find(function (dataSiswa) {
     return dataSiswa.nama === "Ani";
 })
@@ -38,6 +41,7 @@ const siswaAni = siswa.find(function (dataSiswa) {
 console.log(siswaAni);
 
 //some()mengecek apakah ada minimal 1 data yang memenuhi kondisi tertentu
+console.log("ARRAY SOME");
 const nilaiDibawah80 = siswa.some(function (dataSiswa) {
     return dataSiswa.nilai < 80;
 })
@@ -45,6 +49,7 @@ const nilaiDibawah80 = siswa.some(function (dataSiswa) {
 console.log(nilaiDibawah80);
 
 //every()mengecek apakah semua data memenuhi kondisi tertentu
+console.log("ARRAY EVERY");
 const nilaiDiatas60 = siswa.every(function (dataSiswa) {
     return dataSiswa.nilai >= 70;
 })
