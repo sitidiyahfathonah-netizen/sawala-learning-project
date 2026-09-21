@@ -138,25 +138,37 @@ async function tampilkanMakanan (){
 
 tampilkanMakanan()*/
 
-function pesanMakanan(makananTersedia) {
+function cekMakanan(makananTersedia){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (makananTersedia === true) {
-                resolve("makanan sudah siap!")
+                resolve("makanan tersedia!")
             } else {
-                reject("makanan tidak tersedia")
+                reject("makanan tidak tersedia!")
             }
         }, 1000)
     })
 }
 
-function cekMakanan(makananTersedia){
+function pesanMakanan(makananTersedia) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (makananTersedia === true) {
-                resolve("makanan tersedia")
+                resolve("makanan sedang dibuat!")
             } else {
-                reject("makanan tidak tersedia")
+                reject("makanan tidak tersedia!")
+            }
+        }, 1000)
+    })
+}
+
+function selesaiMemasak(makananTersedia){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (makananTersedia === true) {
+                resolve("makanan selesai!")
+            } else {
+                reject("makanan tidak selesai!")
             }
         }, 1000)
     })
@@ -193,6 +205,9 @@ async function tampilkanMakanan2() {
        
        const statusPesan = await pesanMakanan(true)
        console.log(statusPesan)
+
+       const statusSelesai = await selesaiMemasak(true)
+       console.log(statusSelesai)
 
        const statusMakan = await makanMakanan2(true)
        console.log(statusMakan)
