@@ -150,6 +150,18 @@ function pesanMakanan(makananTersedia) {
     })
 }
 
+function cekMakanan(makananTersedia){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (makananTersedia === true) {
+                resolve("makanan tersedia")
+            } else {
+                reject("makanan tidak tersedia")
+            }
+        }, 1000)
+    })
+}
+
 function makanMakanan2(makananTersedia) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -162,12 +174,31 @@ function makanMakanan2(makananTersedia) {
     })
 }
 
+function bayarMakanan(pembayaranTersedia){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (pembayaranTersedia === true) {
+                resolve("pembayaran berhasil")
+            } else {
+                reject("pembayaran gagal")
+            }
+        }, 1000)
+    })
+}
+
 async function tampilkanMakanan2() {
     try {
-        const status = await pesanMakanan(true) //await menunggu promise selesai
-        console.log(status)
-        const status2 = await makanMakanan2(true)
-        console.log(status2)
+       const statusCek = await cekMakanan(true) //await menunggu promise selesai
+       console.log(statusCek)
+       
+       const statusPesan = await pesanMakanan(true)
+       console.log(statusPesan)
+
+       const statusMakan = await makanMakanan2(true)
+       console.log(statusMakan)
+
+       const statusBayar = await bayarMakanan(true)
+       console.log(statusBayar)
     } catch (error) { //catch digunakan untuk menangkap error
         console.log(error)
     } finally { //finally akan tetap berjalan meskipun terjadi error atau tidak
