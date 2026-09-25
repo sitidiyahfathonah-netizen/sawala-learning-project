@@ -1,121 +1,18 @@
+/*Promise adalah object JavaScript yang merepresentasikan hasil dari suatu proses asynchronous,
+ baik yang berhasil maupun gagal
+//Promise memiliki 3 state: 
+//asynchronous function adalah function yang berjalan di latar belakang 
+//1. Pending: proses sedang berlangsung
+//2. Fulfilled: proses berhasil
+//3. Rejected: proses gagal
+
 //resolve, reject, fulfilled
 
-/*function pesanMakan(callback){
-    console.log("Mulai..")
-
-    setTimeout(()=>{
-        console.log("1.Makanan siap!")
-        setTimeout(()=>{
-            console.log("2.Saya makan!")
-            
-            setTimeout(()=>{
-                console.log("3.Selesai bayar!")
-
-                setTimeout(()=>{
-                    console.log("4.Saya pulang!")
-                       
-                    callback()
-                },1000)
-            },1000)
-        },1000)
-    },1000)
-}
-
-function callback(){
-    console.log("Semua proses selesai!")
-}
-
-pesanMakan(callback);
-*/
-
-
-/*const pesanMakanan = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log("makanan sedang dibuat..")
-
-        setTimeout(() => {
-            console.log("makanan sudah selesai")
-            resolve("Pesanan berhasil dibuat!")
-        }, 1000)
-    }, 1000)
-})
-
-pesanMakanan.then((status) => {
-    console.log(status)
-})
-*/
-
-/*const pesanMakanan = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log("Pesanan sedang dibuat..")
-
-        reject("Makanan habis!")
-    }, 1000)
-})
-
-pesanMakanan.catch((error) => {
-    console.log(error)
-})*/
-
-
-/*const makananTersedia = false;
-const pesanMakan = new Promise((resolve,reject)=>{
-    if (makananTersedia) {
-        resolve("Makana sedang dibuat")
-    } else {
-        reject("Makananan tidak tersedia")
-    }
-})
-
-pesanMakan.then((sukses) => {
-    console.log(sukses)
-}).catch((error)=>{
-    console.log(error)
-})*/
-
-// promise .then() .then() .then()
-/*const pesanMakan = new Promise ((resolve, reject) => {
-    setTimeout(() => {
-        resolve("makanan sedang dibuat")
-    },1000)
-})
-
-pesanMakan
-    .then((status) => {
-        console.log(status)
-        return "makanan selesai"
-    })
-    .then((status) => {
-        console.log(status)
-        return "saya pulang"
-    })
-    .then((status) => {
-        console.log(status)
-    })*/
-
-/*const pesanMakan = new Promise((resolve) =>{
-    setTimeout(() =>{
-        resolve("makanan sedang dibuat")
-    }, 1000)
-})
-
-pesanMakan.then((status) => {
-    console.log(status)
-    return new Promise ((resolve, reject) =>{
-        setTimeout(() => {
-            reject("pembayaran gagal")
-        }, 1000)
-    })  
-}).then((status) => {
-    console.log(status)
-}).catch((error) => {
-    console.log(error)
-})
-.finally(() => {
-    console.log("Proses selesai!")
-})
-*/
-
+//.then() → menangani hasil Promise yang berhasil (resolve).
+//Namun, .then() juga bisa menangani hasil ketika Promise selesai,
+//bergantung pada callback yang diberikan.
+//async/await → Fungsi async mengembalikan Promise,
+ sedangkan await menunggu hasil Promise sebelum melanjutkan eksekusi fungsi.
 
 //async-await
 /*const pesanMakan = new Promise((resolve) =>{
@@ -222,3 +119,18 @@ async function tampilkanMakanan2() {
 }
 
 tampilkanMakanan2()
+
+/*catatan 
+-function cekMakanan digunakan untuk mengecek apakah makanan tersedia
+-function pesanMakanan digunakan untuk memesan makanan
+-function selesaiMemasak digunakan untuk menyelesaikan masakan
+-function makanMakanan2 digunakan untuk makan makanan
+-function bayarMakanan digunakan untuk membayar makanan
+-function tampilkanMakanan2 digunakan untuk menampilkan semua fungsi*/
+
+/* async await adalah cara untuk menjalankan promise secara berurutan 
+-await menunggu promise selesai sebelum melanjutkan
+-async function digunakan untuk menjalankan promise
+-try digunakan untuk mencoba menjalankan kode yang berpotensi error
+-catch digunakan untuk menangkap error jika terjadi
+-finally akan tetap berjalan meskipun terjadi error atau tidak*/
