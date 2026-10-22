@@ -10,8 +10,7 @@ console.log(cekKelulusan(80));
 
 //function arrow menggunakan => (lebih singkat)
 const hitungTotal = (harga, jumlah) => {
-    const total = harga * jumlah;
-    return total;
+    return harga * jumlah;
 }
 console.log(hitungTotal(10000, 3));
 
@@ -28,3 +27,12 @@ function cekNilai(nilai) {
     }
 }
 console.log(cekNilai(85));
+
+const nilaiSiswa = [50, 30, 70];
+
+const nilaiTinggi = nilaiSiswa.filter((nilai)=> {
+    if (nilai >= 40 ){
+        return nilai ;
+    } 
+})
+console.log("Nilai Tinggi : " + nilaiTinggi);

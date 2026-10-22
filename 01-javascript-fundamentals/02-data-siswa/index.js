@@ -21,10 +21,7 @@ datasiswa.forEach(function(dataSiswa) {
 });
 
 //memfilter siswa yang lulus
-const datasiswaLulus = datasiswa.filter(function(dataSiswa){
-    return dataSiswa.nilai >= 80;
-});
-
+const datasiswaLulus = datasiswa.filter((dataSiswa)=> dataSiswa.nilai >= 80);
 console.log("2. DAFTAR SISWA LULUS", datasiswaLulus);
 
 for(const dataSiswa of datasiswaLulus){
@@ -89,3 +86,21 @@ const siswaNilaiTerendah = datasiswa.filter(function (dataSiswa) {
 });
 
 console.log("10. SISWA DENGAN NILAI TERENDAH", siswaNilaiTerendah);
+
+const datasiswa18 =[{
+    nama: "Diyah",
+    umur: 23,
+}, {
+    nama: "Risa",
+    umur: 24,
+
+}, {
+    nama: "Ira",
+    umur: 25,
+}]
+
+console.log("11. UMUR SISWA", datasiswa18);
+
+const umurDiatas23= datasiswa18.filter((datasiswa)=> datasiswa.umur >23);
+console.log("UMUR SISWA DIATAS 23", umurDiatas23);
+
