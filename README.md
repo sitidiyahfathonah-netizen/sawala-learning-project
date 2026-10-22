@@ -1,4 +1,4 @@
-# Sawala Learning Project
+# Sawala Learning Project 
 
 Dokumentasi Mini Project Pembelajaran Javascript Fundamentals
 
